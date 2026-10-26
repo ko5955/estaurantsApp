@@ -40,13 +40,7 @@ namespace RestaurantApp
             Console.WriteLine($"   ↳ เมนูแนะนำ: {string.Join(", ", Menus)}");
         }
     }
-    // ... (โค้ดส่วนก่อนหน้าของคุณ) ...
-
-    Console.ReadKey();
-        } // ปิดฟังก์ชัน Main
-    } // ปิด class Program
-} // ปิด namespace RestaurantApp
-
+    
     internal class Program
     {
         static void Main(string[] args)
