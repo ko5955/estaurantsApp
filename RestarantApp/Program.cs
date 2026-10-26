@@ -60,6 +60,17 @@ namespace RestaurantApp
                 new Restaurant("R0009", "ร้าน1", "อาหารทั่วไป", 4.5, new List<string> { "ข้าวผัดไข่", "น้ำเปล่า" }) // <-- เพิ่มร้าน1 ตรงนี้ครับ
 
             };
+            // --- จัดเรียงลำดับร้านค้าตามคะแนนรีวิวจากมากไปน้อย ---
+            restaurantList = restaurantList.OrderByDescending(r => r.Rating).ToList();
+
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine("        รายชื่อร้านอาหารทั้งหมด (เรียงตามคะแนน)     ");
+            Console.WriteLine("---------------------------------------------");
+            foreach (var shop in restaurantList)
+            {
+                shop.DisplaySummary();
+            }
+
 
             Console.WriteLine("---------------------------------------------");
             Console.WriteLine("               รายชื่อร้านอาหารทั้งหมด        ");
